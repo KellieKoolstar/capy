@@ -1,14 +1,78 @@
+html {
+    scroll-behavior: smooth;
+    cursor: url('size50.webp'), auto;
+}
+
 body {
     margin: 0;
     font-family: "Matemasie", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #43291f;
+    font-size: 100;
 }
+
+a:hover { cursor:url("size50.webp"), auto; }
+
+/* nav bar*/
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    translate: -50%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: #766153;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center; 
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+    transform: scale(1.2); 
+}
+
+/* gif */
+#gif {
+    transform: scaleX(-1);
+    height: 50px;
+}
+
+/* home */
 
 #home {
     background-color: #DAD7CD;
     text-align: center;
     padding-top: 10%;
+    font-size: 1.3em;
+}
+
+#home, #fact1, #fact2 {
+    height: 100vh;
+    margin: 0;
+}
+
+.grow-hellocapy { 
+    transition: all .2s ease-in-out; 
+}
+
+.grow-hellocapy:hover { 
+    transform: scale(1.1); 
 }
 
 .bounce {
@@ -27,10 +91,21 @@ body {
       }
 }
 
-#fact1, #fact2 {
+/* facts */
+
+#fact1 {
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+#fact2 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 1.3em;
 }
 
 #fact1 {
@@ -41,88 +116,63 @@ body {
     background-color: #588157;
 }
 
+#fact1 p {
+    max-width: 250px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #fact2 img {
     height: 50%;
 }
 
-#home, #fact1, #fact2 {
-    height: 100vh;
-    margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* nav bar*/
-nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    translate: -50%;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav a {
-    color: black;
-    text-decoration: none;
-    padding: 15px;
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-    text-align: center;
-}
-
-/* #cursor {
-    width: 48px;
-    height: 48px;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    translate: -50% -50%;
-    border-radius: 50%;
-    mix-blend-mode: difference;
-}
-
-*/
-
-.grow { 
-    transition: all .2s ease-in-out; 
-}
-
-.grow:hover { 
-    transform: scale(1.2); 
-}
-
-
 #fact2 p {
-    max-width: 250px;
+    max-width: 275px;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-#fact1 p {
-    max-width: 250px;
+#fact2 h2 {
+    text-align: right;
 }
+
+/* vines */
+#vine1 {
+    position: absolute;
+    left: 0;
+    height: 50vh;
+    align-self: start;
+}
+
+#rf {
+    position: absolute;
+    align-self: end;
+    opacity: 50%;
+    right: 0;
+}
+
+#vine3 {
+    position: absolute;
+    right: 0;
+    height: 60vh;
+    align-self: start;
+}
+
+#tree {
+    position: absolute;
+    left: 0;
+    align-self: end;
+    opacity: 60%;
+    height: 5vh;
+}
+
+/* images */
+#capy1 {
+    width: 25%; 
+}
+
+/* end */
 
 #end {
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;*/
     text-align: center;
     background-color: #DAD7CD;
-}
-
-#fact1 p {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#fact2 p {
-    font-family: 'Courier New', Courier, monospace;
 }
